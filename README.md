@@ -1,2 +1,2 @@
 # 42_Formation
-Project developed during the Formation. Two years developsping projects and learning even more compared to Piscine.
+Project developed during the Formation. Two years developing projects and learning even more compared to Piscine.
