@@ -8,8 +8,9 @@ $(NAME) : $(SRC)
 	gcc -Wall -Wextra -Werror $< -o $@
 
 clean:
-	rm -f $(NAME)
+	rm -f *.o
 
 fclean: clean
+	rm -f $(NAME)
 
 .PHONY: all clean fclean
