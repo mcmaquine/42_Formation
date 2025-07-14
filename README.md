@@ -1,2 +1,2 @@
-# 42_Formation
-Project developed during the Formation. Two years developing projects and learning even more compared to Piscine.
+# 42_Warmup
+Project developed during the warmup Formation. Two weaks developing code very similar to those developed on Piscine.
