@@ -6,7 +6,7 @@
 /*   By: mmaquine <mmaquine@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/07/13 23:04:53 by mmaquine          #+#    #+#             */
-/*   Updated: 2025/07/13 23:13:37 by mmaquine         ###   ########.fr       */
+/*   Updated: 2025/07/13 23:15:40 by mmaquine         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,22 +22,18 @@ void	ft_putstr(char *str)
 	}
 }
 
-#include <unistd.h>
-void	ft_putchar(char *c)
-{
-	write(1, c, 1);
-}
-
 int	main(int argc, char **argv)
 {
 	int	i;
 
 	i = 1;
 	if (argc > 1)
+	{
 		while (i < argc)
 		{
 			ft_putstr(argv[i]);
 			ft_putstr("\n");
 			i++;
 		}
+	}
 }
