@@ -6,7 +6,7 @@
 /*   By: mmaquine <mmaquine@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/06/23 20:54:56 by mmaquine          #+#    #+#             */
-/*   Updated: 2025/07/14 16:54:31 by mmaquine         ###   ########.fr       */
+/*   Updated: 2025/07/14 19:42:06 by mmaquine         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,9 +17,9 @@ int	ft_count_if(char **tab, int (*f)(char*))
 
 	i = 0;
 	count = 0;
-	while ()
+	while (*(tab[i]) != 0)
 	{
-		if (!(*f)(tab[i]))
+		if ((*f)(tab[i]))
 			count++;
 		i++;
 	}

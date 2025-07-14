@@ -19,6 +19,5 @@ void	ft_foreach(int *tab, int length, void (*f)(int))
 	{
 		(*f)(tab[i]);
 		i++;
-		write(1, "\n", 1);
 	}
 }
