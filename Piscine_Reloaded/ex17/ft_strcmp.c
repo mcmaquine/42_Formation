@@ -1,26 +1,33 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_print_alphabet.c                                :+:      :+:    :+:   */
+/*   ft_strcmp.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mmaquine <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/07/14 11:38:04 by mmaquine          #+#    #+#             */
-/*   Updated: 2025/07/14 14:40:22 by mmaquine         ###   ########.fr       */
+/*   Created: 2025/06/03 10:17:19 by mmaquine          #+#    #+#             */
+/*   Updated: 2025/07/10 17:38:08 by mmaquine         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-void	ft_putchar(char c);
-void	ft_print_alphabet(void);
-
-void	ft_print_alphabet(void)
+int	ft_strcmp(char *s1, char *s2)
 {
-	char	c;
-
-	c = 'a';
-	while (c <= 'z')
+	while (*s1 && (*s1 == *s2))
 	{
-		ft_putchar(c);
-		c++;
+		s1++;
+		s2++;
 	}
+	return ((unsigned char)(*s1) - (unsigned char)(*s2));
 }
+/*
+#include <stdio.h>
+
+int	main(int argc, char **argv)
+{
+	if (argc > 2)
+	{
+		printf("Size of str1: %d\n", ft_strlen(argv[1]));
+		printf("Size of str2: %d\n", ft_strlen(argv[2]));
+		printf("%d\n", ft_strcmp(argv[1], argv[2]));
+	}
+}*/

@@ -1,26 +1,30 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_print_alphabet.c                                :+:      :+:    :+:   */
+/*   ft_strlen.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mmaquine <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/07/14 11:38:04 by mmaquine          #+#    #+#             */
-/*   Updated: 2025/07/14 14:40:22 by mmaquine         ###   ########.fr       */
+/*   Created: 2025/05/30 16:05:34 by mmaquine          #+#    #+#             */
+/*   Updated: 2025/06/02 09:30:47 by mmaquine         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-void	ft_putchar(char c);
-void	ft_print_alphabet(void);
+#include<stdio.h>
 
-void	ft_print_alphabet(void)
+int	ft_strlen(char *str);
+
+int	ft_strlen(char *str)
 {
-	char	c;
+	int	len;
 
-	c = 'a';
-	while (c <= 'z')
+	len = 0;
+	if (!str)
+		return (0);
+	else
 	{
-		ft_putchar(c);
-		c++;
+		while (str[len] != '\0')
+			len++;
+		return (len);
 	}
 }

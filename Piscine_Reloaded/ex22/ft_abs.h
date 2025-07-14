@@ -1,26 +1,16 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_print_alphabet.c                                :+:      :+:    :+:   */
+/*   ft_abs.h                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: mmaquine <marvin@42.fr>                    +#+  +:+       +#+        */
+/*   By: mmaquine <mmaquine@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/07/14 11:38:04 by mmaquine          #+#    #+#             */
-/*   Updated: 2025/07/14 14:40:22 by mmaquine         ###   ########.fr       */
+/*   Created: 2025/06/30 18:56:28 by mmaquine          #+#    #+#             */
+/*   Updated: 2025/06/30 18:58:29 by mmaquine         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-void	ft_putchar(char c);
-void	ft_print_alphabet(void);
-
-void	ft_print_alphabet(void)
-{
-	char	c;
-
-	c = 'a';
-	while (c <= 'z')
-	{
-		ft_putchar(c);
-		c++;
-	}
-}
+#ifndef FT_ABS_H
+# define FT_ABS_H
+# define ABS(Value) ((Value) > 0 ? Value : -Value)
+#endif

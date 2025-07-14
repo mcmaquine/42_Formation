@@ -1,26 +1,21 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_print_alphabet.c                                :+:      :+:    :+:   */
+/*   ft_div_mod.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mmaquine <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/07/14 11:38:04 by mmaquine          #+#    #+#             */
-/*   Updated: 2025/07/14 14:40:22 by mmaquine         ###   ########.fr       */
+/*   Created: 2025/05/30 15:28:01 by mmaquine          #+#    #+#             */
+/*   Updated: 2025/05/30 15:36:56 by mmaquine         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-void	ft_putchar(char c);
-void	ft_print_alphabet(void);
+#include<stdio.h>
 
-void	ft_print_alphabet(void)
+void	ft_div_mod( int a, int b, int *div, int *mod);
+
+void	ft_div_mod( int a, int b, int *div, int *mod)
 {
-	char	c;
-
-	c = 'a';
-	while (c <= 'z')
-	{
-		ft_putchar(c);
-		c++;
-	}
+	*div = a / b;
+	*mod = a - *div * b;
 }

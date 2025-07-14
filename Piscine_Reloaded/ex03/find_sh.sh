@@ -1,1 +1,1 @@
-basename -s ".sh" $(find . name -name ".sh") 
+basename -s ".sh" $(find . -name "*.sh")

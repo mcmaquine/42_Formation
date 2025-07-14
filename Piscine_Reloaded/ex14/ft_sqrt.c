@@ -1,28 +1,48 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_iterative_factorial.c                           :+:      :+:    :+:   */
+/*   ft_sqrt.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mmaquine <mmaquine@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/06/16 09:38:38 by mmaquine          #+#    #+#             */
-/*   Updated: 2025/07/14 14:32:26 by mmaquine         ###   ########.fr       */
+/*   Created: 2025/06/16 14:49:33 by mmaquine          #+#    #+#             */
+/*   Updated: 2025/07/11 14:06:51 by mmaquine         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int	ft_iterative_factorial(int nb);
-
-int	ft_iterative_factorial(int nb)
+int	ft_sqrt(int nb)
 {
-	int	fat;
+	int	i;
+	int	x;
+	int	xplus1;
 
-	if (nb < 0)
+	if (nb <= 0)
 		return (0);
-	fat = 1;
-	while (nb > 1)
+	i = 0;
+	xplus1 = nb;
+	x = nb;
+	while (i < 100)
 	{
-		fat = fat * nb;
-		nb--;
+		x = xplus1;
+		xplus1 = (x + nb / x) / 2;
+		i++;
 	}
-	return (fat);
+	if (xplus1 * xplus1 == nb)
+	{	
+		if (xplus1 < 0)
+			return (-xplus1);
+		else
+			return (xplus1);
+	}
+	return (0);
 }
+/*
+#include <stdio.h>
+#include <stdlib.h>
+int	main(int argc, char **argv)
+{
+	if (argc > 1)
+	{
+		printf("%d\n", ft_sqrt(atoi(argv[1])));
+	}	
+}*/

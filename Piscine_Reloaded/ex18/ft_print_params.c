@@ -3,22 +3,21 @@
 /*                                                        :::      ::::::::   */
 /*   ft_print_params.c                                  :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: mmaquine <mmaquine@student.42.fr>          +#+  +:+       +#+        */
+/*   By: mmaquine <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/07/13 23:04:53 by mmaquine          #+#    #+#             */
-/*   Updated: 2025/07/13 23:15:40 by mmaquine         ###   ########.fr       */
+/*   Created: 2025/06/17 10:11:23 by mmaquine          #+#    #+#             */
+/*   Updated: 2025/07/14 14:42:42 by mmaquine         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-void	ft_putchar(char *c);
-void	ft_putstr(char *str);
+void	ft_putchar(char c);
 
-void	ft_putstr(char *str)
+void	ft_putstr(char *s)
 {
-	while (*str)
+	while (*s)
 	{
-		ft_putchar(str);
-		str++;
+		ft_putchar(*s);
+		s++;
 	}
 }
 
@@ -27,13 +26,10 @@ int	main(int argc, char **argv)
 	int	i;
 
 	i = 1;
-	if (argc > 1)
+	while (i < argc)
 	{
-		while (i < argc)
-		{
-			ft_putstr(argv[i]);
-			ft_putstr("\n");
-			i++;
-		}
+		ft_putstr(argv[i]);
+		ft_putstr("\n");
+		i++;
 	}
 }
